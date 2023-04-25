@@ -58,12 +58,12 @@
 // |  L0  |  '  |  "  |     |     |     |   |     |     |     |     |     |      |
 // |      |  !  |  @  |  /  |  ?  |     |   |     |     |     |     |     |      |
 // |      |     |  &  |  _  |  -  |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |BSPC+|   |     |     |     |
                         bindings = <
-   &to 0  &kp SQT   &kp DQT   &none      &none      &none        &none  &none  &none  &none  &none  &none
-   &none  &kp EXCL  &kp AT    &kp FSLH   &kp QMARK  &none        &none  &none  &none  &none  &none  &none
-   &none  &none     &kp AMPS  &kp UNDER  &kp MINUS  &none        &none  &none  &none  &none  &none  &none
-                              &none      &none      &none        &none  &none  &none
+   &to 0  &kp SQT   &kp DQT   &none      &none      &none               &none  &none  &none  &none  &none  &none
+   &none  &kp EXCL  &kp AT    &kp FSLH   &kp QMARK  &none               &none  &none  &none  &none  &none  &none
+   &none  &none     &kp AMPS  &kp UNDER  &kp MINUS  &none               &none  &none  &none  &none  &none  &none
+                              &none      &none      &kp LC(BSPC)        &none  &none  &none
                         >;
                 };
                 
