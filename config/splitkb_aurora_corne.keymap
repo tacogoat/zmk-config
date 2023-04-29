@@ -55,14 +55,14 @@
                 
                 ez_symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  '  |  "  |     |     |     |   |     |     |     |     |     |      |
-// |      |  !  |  @  |  /  |  ?  |     |   |     |     |     |     |     |      |
-// |      |     |  &  |  _  |  -  |     |   |     |     |     |     |     |      |
+// |      |  '  |  "  |  .  |     |     |   |     |     |     |     |     |      |
+// |      |  !  |  @  |  /  |  ?  |CAPSW|   |     |     |     |     |     |      |
+// |      |     |  &  |  _  |  -  |CAPSL|   |     |     |     |     |     |      |
 //                    |     |     |BSPC+|   |     |     |     |
                         bindings = <
-   &none  &kp SQT   &kp DQT   &none      &none      &none               &none  &none  &none  &none  &none  &none
-   &none  &kp EXCL  &kp AT    &kp FSLH   &kp QMARK  &none               &none  &none  &none  &none  &none  &none
-   &none  &none     &kp AMPS  &kp UNDER  &kp MINUS  &none               &none  &none  &none  &none  &none  &none
+   &none  &kp SQT   &kp DQT   &kp DOT    &none      &none               &none  &none  &none  &none  &none  &none
+   &none  &kp EXCL  &kp AT    &kp FSLH   &kp QMARK  &caps_word          &none  &none  &none  &none  &none  &none
+   &none  &none     &kp AMPS  &kp UNDER  &kp MINUS  &kp CAPS            &none  &none  &none  &none  &none  &none
                               &none      &none      &kp LC(BSPC)        &none  &none  &none
                         >;
                 };
