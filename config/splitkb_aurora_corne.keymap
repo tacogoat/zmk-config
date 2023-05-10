@@ -42,12 +42,12 @@
                 function_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  F1 |  F2 |  F3 |  F4 | BR+ |   |PREV |PAUSE|NEXT |VOL- |VOL+ | ENTR |
-// |  TAB |  F5 |  F6 |  F7 |  F8 | BR- |   | L4  |LEFT | DN  | UP  |RIGHT|  L6  |
+// |  TAB |  F5 |  F6 |  F7 |  F8 | BR- |   | L4  |LEFT | DN  | UP  |RIGHT|  L3  |
 // | SHFT |  F9 | F10 | F11 | F12 | GUI |   | L5  |HOME |PGDN |PGUP | END | SHFT |
 //                    | CTRL|     | BSPC|   | SPC | L0  | ALT |
                         bindings = <
    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_BRI_UP        &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &trans
-   &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_BRI_DN        &to 4       &kp LEFT  &kp DOWN    &kp UP        &kp RIGHT     &to 6
+   &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_BRI_DN        &to 4       &kp LEFT  &kp DOWN    &kp UP        &kp RIGHT     &trans
    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LGUI            &to 5       &kp HOME  &kp PG_DN   &kp PG_UP     &kp END       &trans
                     	    &trans   &none    &trans              &trans      &to 0     &trans
                         >;
@@ -81,17 +81,17 @@
                         >;
                 };
                 
-                qwerty_layer {
+                system_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | ENTR |
-// |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  L3  |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
-//                    | CTRL|  L0 | BSPC|   | SPC | L0  | ALT |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |  L6 |  L7 |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     | L0  |     |
                         bindings = <
-   &kp ESC    &kp Q  &kp W  &kp E      &kp R  &kp T           &kp Y      &kp U  &kp I      &kp O    &kp P     &kp RET
-   &kp TAB    &kp A  &kp S  &kp D      &kp F  &kp G           &kp H      &kp J  &kp K      &kp L    &kp SEMI  &mo 3
-   &kp LSHFT  &kp Z  &kp X  &kp C      &kp V  &kp B           &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                            &kp LCTRL  &to 0  &kp BSPC        &kp SPACE  &to 0  &kp LALT
+   &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
+   &none  &to 6  &to 7  &to 8  &none  &none        &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
+                        &none  &none  &none        &none  &to 0  &none
                         >;
                 };
                 
@@ -100,12 +100,26 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   | L0  |     |     |
+//                    |     |     |     |   |     | L0  |     |
                         bindings = <
-   &none       &none         &none         &none         &none          &none             &none  &none  &none  &none  &none  &none
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4      &none  &none  &none  &none  &none  &none
-   &none       &none         &none         &none         &none          &none             &none  &none  &none  &none  &none  &none
-                    	                   &none         &none          &none             &none  &to 0  &none
+   &none       &none         &none         &none         &none          &none               &none  &none  &none  &none  &none  &none
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4        &none  &none  &none  &none  &none  &none
+   &none       &none         &none         &none         &none          &none               &none  &none  &none  &none  &none  &none
+                    	                   &none         &none          &none               &none  &to 0  &none
+                        >;
+                };
+                
+                qwerty_layer {
+// -----------------------------------------------------------------------------------------
+// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | ENTR |
+// |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  L3  |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
+//                    | CTRL|     | BSPC|   | SPC | L0  | ALT |
+                        bindings = <
+   &kp ESC    &kp Q  &kp W  &kp E      &kp R  &kp T           &kp Y      &kp U  &kp I      &kp O    &kp P     &kp RET
+   &kp TAB    &kp A  &kp S  &kp D      &kp F  &kp G           &kp H      &kp J  &kp K      &kp L    &kp SEMI  &mo 3
+   &kp LSHFT  &kp Z  &kp X  &kp C      &kp V  &kp B           &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                            &kp LCTRL  &none  &kp BSPC        &kp SPACE  &to 0  &kp LALT
                         >;
                 };
         };
