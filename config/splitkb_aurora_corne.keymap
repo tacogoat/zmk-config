@@ -24,10 +24,10 @@
 // | SHFT |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  | SHFT |
 //                    |  L1 | BSPC| ENTR|   | L3  | SPC |     |
                         bindings = <
-   &kp ESC    &kp SQT      &kp COMMA    &kp DOT     &kp P       &kp Y           &kp F  &kp G       &kp C       &kp R        &kp L        &kp RET
-   &kp TAB    &mt LSHFT A  &mt LCTRL O  &mt LALT E  &mt LGUI U  &kp I           &kp D  &mt LGUI H  &mt LALT T  &mt LCTRL N  &mt LSHFT S  &none
-   &kp LSHFT  &kp SEMI     &kp Q        &kp J       &kp K       &kp X           &kp B  &kp M       &kp W       &kp V        &kp Z        &kp RSHFT
-                                        &to 1       &kp BSPC    &kp ENTR        &mo 3 3  &kp SPC     &none
+   &none  &kp SQT      &kp COMMA    &kp DOT     &kp P       &kp Y           &kp F  &kp G       &kp C       &kp R        &kp L        &none
+   &none  &mt LSHFT A  &mt LCTRL O  &mt LALT E  &mt LGUI U  &kp I           &kp D  &mt LGUI H  &mt LALT T  &mt LCTRL N  &mt LSHFT S  &none
+   &none  &kp SEMI     &kp Q        &kp J       &kp K       &kp X           &kp B  &kp M       &kp W       &kp V        &kp Z        &none
+                                    &to 1       &kp BSPC    &kp RET         &mo 3  &kp SPC     &none
                         >;
                 };
                 symbol_layer {
@@ -37,9 +37,9 @@
 // | SHFT |  ~  |  %  |  #  |  $  |  \  |   |  _  |  *  |  +  |  =  |  /  | SHFT |
 //                    |  L2 | BSPC| ENTR|   | L3  | SPC | L0  |
                         bindings = <
-   &trans  &kp N1           &kp N2           &kp N3         &kp N4         &kp N5          &kp N6     &kp N7         &kp N8         &kp N9           &kp N0           &trans
-   &trans  &mt LSHFT GRAVE  &mt LCTRL LBRC   &mt LALT LBKT  &mt LGUI LPAR  &kp PIPE        &kp CARET  &mt LGUI RPAR  &mt LALT RBKT  &mt LCTRL RBRC   &mt LSHFT MINUS  &trans
-   &trans  &kp TILDE        &kp PRCNT        &kp HASH       &kp DLLR       &kp BSLH        &kp UNDER  &kp STAR       &kp PLUS       &kp EQUAL        &kp FSLH         &trans
+   &none  &kp N1           &kp N2           &kp N3         &kp N4         &kp N5          &kp N6     &kp N7         &kp N8         &kp N9           &kp N0           &none
+   &none  &mt LSHFT GRAVE  &mt LCTRL LBRC   &mt LALT LBKT  &mt LGUI LPAR  &kp PIPE        &kp CARET  &mt LGUI RPAR  &mt LALT RBKT  &mt LCTRL RBRC   &mt LSHFT MINUS  &none
+   &none  &kp TILDE        &kp PRCNT        &kp HASH       &kp DLLR       &kp BSLH        &kp UNDER  &kp STAR       &kp PLUS       &kp EQUAL        &kp FSLH         &none
                                              &to 2          &trans         &trans          &trans     &trans         &to 0
                         >;
                 };
@@ -51,9 +51,9 @@
 // | SHFT |  F9 | F10 | F11 | F12 | GUI |   | L5  |HOME |PGDN |PGUP | END | SHFT |
 //                    |     | BSPC| ENTR|   | L3  | SPC | L0  |
                         bindings = <
-   &trans  &kp F1        &kp F2         &kp F3        &kp F4        &kp C_BRI_UP        &kp C_PREV  &kp C_PP       &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP     &trans
-   &trans  &mt LSHFT F5  &mt LCTRL F6   &mt LALT F7   &mt LGUI F8   &kp C_BRI_DN        &to 4       &mt LGUI LEFT  &mt LALT DOWN  &mt LCTRL UP  &mt LSHFT RIGHT  &trans
-   &trans  &kp F9        &kp F10        &kp F11       &kp F12       &kp LGUI            &to 5       &kp HOME       &kp PG_DN      &kp PG_UP     &kp END          &trans
+   &none  &kp F1        &kp F2         &kp F3        &kp F4        &kp C_BRI_UP        &kp C_PREV  &kp C_PP       &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP     &none
+   &none  &mt LSHFT F5  &mt LCTRL F6   &mt LALT F7   &mt LGUI F8   &kp C_BRI_DN        &to 4       &mt LGUI LEFT  &mt LALT DOWN  &mt LCTRL UP  &mt LSHFT RIGHT  &none
+   &none  &kp F9        &kp F10        &kp F11       &kp F12       &kp LGUI            &to 5       &kp HOME       &kp PG_DN      &kp PG_UP     &kp END          &none
                     	                &none         &trans        &trans              &trans      &trans         &to 0
                         >;
                 };
