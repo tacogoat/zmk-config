@@ -121,10 +121,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
 //                    |     | BSPC| ENTR|   | L3  | SPC | L0  |
                         bindings = <
-   &kp ESC    &kp Q        &kp W        &kp E       &kp R       &kp T           &kp Y  &kp U       &kp I       &kp O        &kp P           &kp RET
-   &kp TAB    &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F  &kp G           &kp H  &mt LGUI J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &none
-   &kp LSHFT  &kp Z        &kp X        &kp C       &kp V       &kp B           &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH        &kp RSHFT
-                                        &none       &kp BSPC    &kp ENTR        &mo 3  &kp SPC     &to 0
+   &none  &kp Q        &kp W        &kp E       &kp R       &kp T           &kp Y  &kp U       &kp I       &kp O        &kp P           &none
+   &none  &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F  &kp G           &kp H  &mt LGUI J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &none
+   &none  &kp Z        &kp X        &kp C       &kp V       &kp B           &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH        &none
+                                    &none       &kp BSPC    &kp ENTR        &mo 3  &kp SPC     &to 0
                         >;
                 };
         };
