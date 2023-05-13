@@ -27,7 +27,7 @@
    &kp ESC    &kp SQT      &kp COMMA    &kp DOT     &kp P       &kp Y           &kp F  &kp G       &kp C       &kp R        &kp L        &kp RET
    &kp TAB    &mt LSHFT A  &mt LCTRL O  &mt LALT E  &mt LGUI U  &kp I           &kp D  &mt LGUI H  &mt LALT T  &mt LCTRL N  &mt LSHFT S  &none
    &kp LSHFT  &kp SEMI     &kp Q        &kp J       &kp K       &kp X           &kp B  &kp M       &kp W       &kp V        &kp Z        &kp RSHFT
-                                        &to 1       &kp BSPC    &kp ENTR        &mo 3  &kp SPC     &none
+                                        &to 1       &kp BSPC    &kp ENTR        &mo 3 3  &kp SPC     &none
                         >;
                 };
                 symbol_layer {
