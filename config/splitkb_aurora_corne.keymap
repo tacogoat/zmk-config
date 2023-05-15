@@ -30,6 +30,7 @@
                                     &to 1       &kp BSPC    &kp RET         &mo 3  &kp SPC     &none
                         >;
                 };
+                
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
@@ -89,7 +90,7 @@
                 system_layer {
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |  L6 |  L7 |     |     |     |   |     |     |     |     |     |      |
+// |      |  L6 |  L7 |  L8 |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     | L0  |
                         bindings = <
@@ -111,6 +112,20 @@
    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4        &none  &none  &none  &none  &none  &none
    &none       &none         &none         &none         &none          &none               &none  &none  &none  &none  &none  &none
                     	                   &none         &none          &none               &none  &none  &to 0
+                        >;
+                };
+                
+                no_mods_layer {
+// -----------------------------------------------------------------------------------------
+// |      |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |      |
+// |      |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |      |
+// |      |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |      |
+//                    |     | BSPC| ENTR|   | L3  | SPC | L0  |
+                        bindings = <
+   &none  &kp SQT   &kp COMMA  &kp DOT  &kp P     &kp Y           &kp F  &kp G    &kp C  &kp R  &kp L  &none
+   &none  &kp A     &kp O      &kp E    &kp U     &kp I           &kp D  &kp H    &kp T  &kp N  &kp S  &none
+   &none  &kp SEMI  &kp Q      &kp J    &kp K     &kp X           &kp B  &kp M    &kp W  &kp V  &kp Z  &none
+                               &none    &kp BSPC  &kp RET         &mo 3  &kp SPC  &to 0
                         >;
                 };
                 
