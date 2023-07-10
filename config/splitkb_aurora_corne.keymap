@@ -10,7 +10,7 @@
 
 &mt {
     flavor = "balanced";
-    tapping_term_ms = <200>;
+    tapping_term_ms = <160>;
 };
 
 / {
@@ -22,12 +22,12 @@
 // |      |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |      |
 // |      |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |      |
 // |      |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |      |
-//                    |  L1 | BSPC| ENTR|   | L3  | SPC |     |
+//                    |  L1 | BSPC| SHFT|   | L3  | SPC |     |
                         bindings = <
-   &none  &kp SQT      &kp COMMA    &kp DOT     &kp P       &kp Y           &kp F  &kp G       &kp C       &kp R        &kp L        &none
-   &none  &mt LSHFT A  &mt LCTRL O  &mt LALT E  &mt LGUI U  &kp I           &kp D  &mt LGUI H  &mt LALT T  &mt LCTRL N  &mt LSHFT S  &none
-   &none  &kp SEMI     &kp Q        &kp J       &kp K       &kp X           &kp B  &kp M       &kp W       &kp V        &kp Z        &none
-                                    &to 1       &kp BSPC    &kp RET         &mo 3  &kp SPC     &none
+   &none  &kp SQT   &kp COMMA    &kp DOT     &kp P     &kp Y            &kp F  &kp G    &kp C       &kp R        &kp L  &none
+   &none  &kp A     &kp O        &kp E       &kp U     &kp I            &kp D  &kp H    &kp T       &kp N        &kp S  &none
+   &none  &kp SEMI  &mt LCTRL Q  &mt LALT J  &kp K     &kp X            &kp B  &kp M    &mt LALT W  &mt LCTRL V  &kp Z  &none
+                                 &to 1       &kp BSPC  &kp LSHFT        &mo 3  &kp SPC  &none
                         >;
                 };
                 
@@ -36,40 +36,40 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
 // |      |  `  |  {  |  [  |  (  | "|" |   |  ^  |  )  |  ]  |  }  |  -  |      |
 // |      |  ~  |  %  |  #  |  $  |  \  |   |  _  |  *  |  +  |  =  |  /  |      |
-//                    |  L2 | BSPC| ENTR|   | L3  | SPC | L0  |
+//                    |  L2 | BSPC| SHFT|   | L3  | SPC | L0  |
                         bindings = <
-   &none  &kp N1           &kp N2           &kp N3         &kp N4         &kp N5          &kp N6     &kp N7         &kp N8         &kp N9           &kp N0           &none
-   &none  &mt LSHFT GRAVE  &mt LCTRL LBRC   &mt LALT LBKT  &mt LGUI LPAR  &kp PIPE        &kp CARET  &mt LGUI RPAR  &mt LALT RBKT  &mt LCTRL RBRC   &mt LSHFT MINUS  &none
-   &none  &kp TILDE        &kp PRCNT        &kp HASH       &kp DLLR       &kp BSLH        &kp UNDER  &kp STAR       &kp PLUS       &kp EQUAL        &kp FSLH         &none
-                                             &to 2          &trans         &trans          &trans     &trans         &to 0
+   &none  &kp N1     &kp N2           &kp N3         &kp N4    &kp N5          &kp N6     &kp N7    &kp N8         &kp N9           &kp N0     &none
+   &none  &kp GRAVE  &kp LBRC         &kp LBKT       &kp LPAR  &kp PIPE        &kp CARET  &kp RPAR  &kp RBKT       &kp RBRC         &kp MINUS  &none
+   &none  &kp TILDE  &mt LCTRL PRCNT  &mt LALT HASH  &kp DLLR  &kp BSLH        &kp UNDER  &kp STAR  &mt LALT PLUS  &mt LCTRL EQUAL  &kp FSLH   &none
+                                      &to 2          &trans    &trans          &trans     &trans    &to 0
                         >;
                 };
 
                 function_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  F1 |  F2 |  F3 |  F4 | BR+ |   |PREV |PAUSE|NEXT |VOL- |VOL+ |      |
-// |      |  F5 |  F6 |  F7 |  F8 | BR- |   | L4  |LEFT | DN  | UP  |RIGHT|      |
-// |      |  F9 | F10 | F11 | F12 | GUI |   | L5  |HOME |PGDN |PGUP | END |      |
-//                    |     | BSPC| ENTR|   | L3  | SPC | L0  |
+// |      |  F1 |  F2 |  F3 |  F4 | BR+ |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
+// |      |  F5 |  F6 |  F7 |  F8 | BR- |   |PAUSE|LEFT |DOWN | UP  |RIGHT|      |
+// |      |  F9 | F10 | F11 | F12 |     |   |     |HOME |PGDN |PGUP | END |      |
+//                    |     | BSPC| SHFT|   | L3  | SPC | L0  |
                         bindings = <
-   &none  &kp F1        &kp F2         &kp F3        &kp F4        &kp C_BRI_UP        &kp C_PREV  &kp C_PP       &kp C_NEXT     &kp C_VOL_DN  &kp C_VOL_UP     &none
-   &none  &mt LSHFT F5  &mt LCTRL F6   &mt LALT F7   &mt LGUI F8   &kp C_BRI_DN        &to 4       &mt LGUI LEFT  &mt LALT DOWN  &mt LCTRL UP  &mt LSHFT RIGHT  &none
-   &none  &kp F9        &kp F10        &kp F11       &kp F12       &kp LGUI            &to 5       &kp HOME       &kp PG_DN      &kp PG_UP     &kp END          &none
-                    	                &none         &trans        &trans              &trans      &trans         &to 0
+   &none  &kp F1  &kp F2         &kp F3        &kp F4   &kp C_BRI_UP        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV       &kp C_NEXT  &none
+   &none  &kp F5  &kp F6         &kp F7        &kp F8   &kp C_BRI_DN        &kp C_PP    &kp LEFT      &kp DOWN        &kp UP           &kp RIGHT   &none
+   &none  &kp F9  &mt LCTRL F10  &mt LALT F11  &kp F12  &none               &none       &kp HOME      &mt LALT PG_DN  &mt LCTRL PG_UP  &kp END     &none
+                    	         &none         &trans   &trans              &trans      &trans        &trans
                         >;
                 };
                 
-                ez_symbol_layer {
+                ez_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     | ESC | TAB |CAPSL|     |   |     |     |     |     |     |      |
-// |      |  !  |  @  |  /  |  ?  |CAPSW|   |     | GUI | ALT |CTRL |SHFT |      |
-// |      |     |  &  |  _  |  -  |     |   |     |     |     |     |     |      |
-//                    |     |     |BSPC+|   |     |     |     |
+// |      | ESC |  !  |CAPSW|CAPSL|     |   |     |     | L5  |     |     |      |
+// |      | TAB |  @  |  /  |  ?  | ENTR|   |     | GUI | L4  | L6  | L7  |      |
+// |      |     |  &  |  _  |  -  |     |   |     |     | ALT |CTRL |     |      |
+//                    |     |BSPC+|     |   |     |     |     |
                         bindings = <
-   &none  &none     &kp ESC   &kp TAB    &kp CAPS      &none             &none   &none     &none     &none      &none      &none
-   &none  &kp EXCL  &kp AT    &kp FSLH   &kp QMARK     &caps_word        &none   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none
-   &none  &none     &kp AMPS  &kp UNDER  &kp MINUS     &none             &none   &none     &none     &none      &none      &none
-                              &none      &kp LC(BSPC)  &none             &trans  &none     &none
+   &none  &kp ESC  &kp EXCL  &caps_word  &kp CAPS      &none          &none   &none     &to 5     &none      &none  &none
+   &none  &kp TAB  &kp AT    &kp FSLH    &kp QMARK     &kp RET        &none   &kp LGUI  &to 4     &to 6      &to 7  &none
+   &none  &none    &kp AMPS  &kp UNDER   &kp MINUS     &none          &none   &none     &kp LALT  &kp LCTRL  &none  &none
+                             &none       &kp LC(BSPC)  &none          &trans  &none     &none
                         >;
                 };
                 
@@ -84,20 +84,6 @@
    &none  &none   &kp A   &kp B   &kp C          &none                &none   &kp D      &kp E   &kp F   &none   &none
    &none  &none   &none   &none   &none          &none                &none   &none      &none   &none   &none   &none
                           &none   &kp BSPC       &kp LC(LS(U))        &none   &kp SPACE  &to 0
-                        >;
-                };
-                
-                system_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |  L6 |  L7 |  L8 |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     | L0  |
-                        bindings = <
-   &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-   &none  &to 6  &to 7  &to 8  &none  &none        &none  &none  &none  &none  &none  &none
-   &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-                        &none  &none  &none        &none  &none  &to 0
                         >;
                 };
                 
