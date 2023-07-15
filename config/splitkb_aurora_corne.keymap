@@ -55,7 +55,7 @@
    &none  &kp F1  &kp F2         &kp F3        &kp F4   &kp C_BRI_UP        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV       &kp C_NEXT  &none
    &none  &kp F5  &kp F6         &kp F7        &kp F8   &kp C_BRI_DN        &kp C_PP    &kp LEFT      &kp DOWN        &kp UP           &kp RIGHT   &none
    &none  &kp F9  &mt LCTRL F10  &mt LALT F11  &kp F12  &none               &none       &kp HOME      &mt LALT PG_DN  &mt LCTRL PG_UP  &kp END     &none
-                    	         &none         &trans   &trans              &trans      &trans        &trans
+                    	         &none         &trans   &trans              &trans      &trans        &to 0
                         >;
                 };
                 
