@@ -63,13 +63,13 @@
 // -----------------------------------------------------------------------------------------
 // |      | ESC |  !  |CAPSW|CAPSL|     |   |     |     | L5  |     |     |      |
 // |      | TAB |  @  |  /  |  ?  | ENTR|   |     | GUI | L4  | L6  | L7  |      |
-// |      |     |  &  |  _  |  -  |     |   |     |     | ALT |CTRL |     |      |
-//                    |     |BSPC+|     |   |     |     |     |
+// |      |  ~  |  &  |  _  |  -  |     |   |     |     | ALT |CTRL |     |      |
+//                    |     |BSPC+| SHFT|   |     |     |     |
                         bindings = <
-   &none  &kp ESC  &kp EXCL  &caps_word  &kp CAPS      &none          &none   &none     &to 5     &none      &none  &none
-   &none  &kp TAB  &kp AT    &kp FSLH    &kp QMARK     &kp RET        &none   &kp LGUI  &to 4     &to 6      &to 7  &none
-   &none  &none    &kp AMPS  &kp UNDER   &kp MINUS     &none          &none   &none     &kp LALT  &kp LCTRL  &none  &none
-                             &none       &kp LC(BSPC)  &none          &trans  &none     &none
+   &none  &kp ESC    &kp EXCL  &caps_word  &kp CAPS      &none            &none   &none     &to 5     &none      &none  &none
+   &none  &kp TAB    &kp AT    &kp FSLH    &kp QMARK     &kp RET          &none   &kp LGUI  &to 4     &to 6      &to 7  &none
+   &none  &kp TILDE  &kp AMPS  &kp UNDER   &kp MINUS     &none            &none   &none     &kp LALT  &kp LCTRL  &none  &none
+                               &none       &kp LC(BSPC)  &kp LSHFT        &trans  &none     &none
                         >;
                 };
                 
