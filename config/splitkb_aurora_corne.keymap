@@ -62,12 +62,12 @@
                 ez_layer {
 // -----------------------------------------------------------------------------------------
 // |      | ESC |  !  |CAPSW|CAPSL|     |   |     |     | L5  |     |     |      |
-// |      | TAB |  @  |  /  |  ?  | ENTR|   |     | GUI | L4  | L6  | L7  |      |
+// |      | TAB |  @  |  /  |  ?  | ENTR|   |     | GUI | L4  | L6  |     |      |
 // |      |  ~  |  &  |  _  |  -  |     |   |     |     | ALT |CTRL |     |      |
 //                    |     |BSPC+| SHFT|   |     |     |     |
                         bindings = <
    &none  &kp ESC    &kp EXCL  &caps_word  &kp CAPS      &none            &none   &none     &to 5     &none      &none  &none
-   &none  &kp TAB    &kp AT    &kp FSLH    &kp QMARK     &kp RET          &none   &kp LGUI  &to 4     &to 6      &to 7  &none
+   &none  &kp TAB    &kp AT    &kp FSLH    &kp QMARK     &kp RET          &none   &kp LGUI  &to 4     &to 6      &none  &none
    &none  &kp TILDE  &kp AMPS  &kp UNDER   &kp MINUS     &none            &none   &none     &kp LALT  &kp LCTRL  &none  &none
                                &none       &kp LC(BSPC)  &kp LSHFT        &trans  &none     &none
                         >;
@@ -83,7 +83,7 @@
    &none  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5               &kp N6  &kp N7     &kp N8  &kp N9  &kp N0  &none
    &none  &none   &kp A   &kp B   &kp C          &none                &none   &kp D      &kp E   &kp F   &none   &none
    &none  &none   &none   &none   &none          &none                &none   &none      &none   &none   &none   &none
-                          &none   &kp BSPC       &kp LC(LS(U))        &none   &kp SPACE  &to 0
+                          &none   &kp BSPC       &kp LC(LS(U))        &none   &kp SPC    &to 0
                         >;
                 };
                 
@@ -100,32 +100,74 @@
                     	                   &none         &none          &none               &none  &none  &to 0
                         >;
                 };
-                
-                no_mods_layer {
+
+                gaming_base_layer {
+// -----------------------------------------------------------------------------------------
+// |      | ESC |  Q  |  W  |  E  |  R  |   |     |     |     |     |     |      |
+// |      | SHFT|  A  |  S  |  D  |  F  |   |     | F1  | F2  | F3  | F4  |      |
+// |      | CTRL|  Z  |  X  |  C  |  V  |   |     |     |     |     |     |      |
+//                    | TAB |  L7 | SPC |   |     | L8  |     |
+                        bindings = <
+   &none  &kp ESC    &kp Q  &kp W    &kp E  &kp R          &none  &none   &none   &none   &none   &none
+   &none  &kp LSHFT  &kp A  &kp S    &kp D  &kp F          &none  &kp F1  &kp F2  &kp F3  &kp F4  &none
+   &none  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V          &none  &none   &none   &none   &none   &none
+                            &kp TAB  &mo 7  &kp SPC        &none  &to 8   &none
+                        >;
+                };
+
+                gaming_secondary_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     |  1  |     |  4  |  7  |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
+// |      |     |  2  |     |  5  |  8  |   |PAUSE|     |     |     |     |      |
+// |      |     |  3  |     |  6  |  9  |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     | L0  |
+                        bindings = <
+   &none  &none  &kp N1  &none  &kp N4  &kp N7        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none
+   &none  &none  &kp N2  &none  &kp N5  &kp N8        &kp C_PP    &none         &none         &none       &none       &none
+   &none  &none  &kp N3  &none  &kp N6  &kp N9        &none       &none         &none         &none       &none       &none
+                         &none  &trans  &none         &none       &none         &to 0
+                        >;
+                };
+
+                gaming_chat_base_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |      |
 // |      |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |      |
 // |      |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |      |
-//                    |     | BSPC| SHFT|   | L3  | SPC | L0  |
+//                    |  L9 | BSPC| SHFT|   | L10 | SPC | L6  |
                         bindings = <
-   &none  &kp SQT   &kp COMMA  &kp DOT  &kp P     &kp Y           &kp F  &kp G    &kp C  &kp R  &kp L  &none
-   &none  &kp A     &kp O      &kp E    &kp U     &kp I           &kp D  &kp H    &kp T  &kp N  &kp S  &none
-   &none  &kp SEMI  &kp Q      &kp J    &kp K     &kp X           &kp B  &kp M    &kp W  &kp V  &kp Z  &none
-                               &none    &kp BSPC  &kp RET         &mo 3  &kp SPC  &to 0
+   &none  &kp SQT   &kp COMMA  &kp DOT  &kp P     &kp Y            &kp F   &kp G    &kp C  &kp R  &kp L  &none
+   &none  &kp A     &kp O      &kp E    &kp U     &kp I            &kp D   &kp H    &kp T  &kp N  &kp S  &none
+   &none  &kp SEMI  &kp Q      &kp J    &kp K     &kp X            &kp B   &kp M    &kp W  &kp V  &kp Z  &none
+                               &mo 9    &kp BSPC  &kp LSHFT        &mo 10  &kp SPC  &to 6
                         >;
                 };
-                
-                qwerty_layer {
+
+                gaming_chat_symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |      |
-// |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |      |
-// |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |      |
-//                    |     | BSPC| ENTR|   | L3  | SPC | L0  |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |      |  `  |  {  |  [  |  (  | "|" |   |  ^  |  )  |  ]  |  }  |  -  |      |
+// |      |  ~  |  %  |  #  |  $  |  \  |   |  _  |  *  |  +  |  =  |  /  |      |
+//                    |     | BSPC| SHFT|   |     | SPC |     |
                         bindings = <
-   &none  &kp Q        &kp W        &kp E       &kp R       &kp T            &kp Y  &kp U       &kp I       &kp O        &kp P           &none
-   &none  &mt LSHFT A  &mt LCTRL S  &mt LALT D  &mt LGUI F  &kp G            &kp H  &mt LGUI J  &mt LALT K  &mt LCTRL L  &mt LSHFT SEMI  &none
-   &none  &kp Z        &kp X        &kp C       &kp V       &kp B            &kp N  &kp M       &kp COMMA   &kp DOT      &kp FSLH        &none
-                                    &none       &kp BSPC    &kp LSHFT        &mo 3  &kp SPC     &to 0
+   &none  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5          &kp N6     &kp N7    &kp N8    &kp N9     &kp N0     &none
+   &none  &kp GRAVE  &kp LBRC   &kp LBKT  &kp LPAR  &kp PIPE        &kp CARET  &kp RPAR  &kp RBKT  &kp RBRC   &kp MINUS  &none
+   &none  &kp TILDE  &kp PRCNT  &kp HASH  &kp DLLR  &kp BSLH        &kp UNDER  &kp STAR  &kp PLUS  &kp EQUAL  &kp FSLH   &none
+                                &trans    &trans    &trans          &none      &trans    &none
+                        >;
+                };
+
+                gaming_chat_ez_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     |  !  |     |     |     |   |     |     |     |     |     |      |
+// |      |     |  @  |  /  |  ?  | ENTR|   |     |LEFT |DOWN | UP  |RIGHT|      |
+// |      |  ~  |  &  |  _  |  -  |     |   |     |HOME |     |     | END |      |
+//                    |     |BSPC+| SHFT|   |     |     |     |
+                        bindings = <
+   &none  &none      &kp EXCL  &none      &none         &none          &none   &none     &none     &none   &none      &none
+   &none  &none      &kp AT    &kp FSLH   &kp QMARK     &kp RET        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+   &none  &kp TILDE  &kp AMPS  &kp UNDER  &kp MINUS     &none          &none   &kp HOME  &none     &none   &kp END    &none
+                               &none      &kp LC(BSPC)  &trans         &trans  &none     &none
                         >;
                 };
         };
