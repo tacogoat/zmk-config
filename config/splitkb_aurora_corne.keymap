@@ -117,15 +117,15 @@
 
                 gaming_secondary_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |  1  |  W  |  4  |  7  |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
-// |      |     |  2  |  G  |  5  |  8  |   |PAUSE|     |     |     |     |      |
-// |      |     |  3  |     |  6  |  9  |   |     |     |     |     |     |      |
+// |      |     |  1  |  W  |  2  |  3  |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
+// |      |     |  4  |  G  |  5  |  6  |   |PAUSE|     |     |     |     |      |
+// |      |     |  7  |  0  |  8  |  9  |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     | L0  |
                         bindings = <
-   &none  &none  &kp N1  &kp W  &kp N4  &kp N7        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none
-   &none  &none  &kp N2  &kp G  &kp N5  &kp N8        &kp C_PP    &none         &none         &none       &none       &none
-   &none  &none  &kp N3  &none  &kp N6  &kp N9        &none       &none         &none         &none       &none       &none
-                         &none  &trans  &none         &none       &none         &to 0
+   &none  &none  &kp N1  &kp W   &kp N2  &kp N3        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none
+   &none  &none  &kp N4  &kp G   &kp N5  &kp N6        &kp C_PP    &none         &none         &none       &none       &none
+   &none  &none  &kp N7  &kp N0  &kp N8  &kp N9        &none       &none         &none         &none       &none       &none
+                         &none   &trans  &none         &none       &none         &to 0
                         >;
                 };
 
