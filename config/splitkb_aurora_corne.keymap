@@ -117,13 +117,13 @@
 
                 gaming_secondary_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |  1  |     |  4  |  7  |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
-// |      |     |  2  |     |  5  |  8  |   |PAUSE|     |     |     |     |      |
+// |      |     |  1  |  W  |  4  |  7  |   |MUTE |VOL- |VOL+ |PREV |NEXT |      |
+// |      |     |  2  |  G  |  5  |  8  |   |PAUSE|     |     |     |     |      |
 // |      |     |  3  |     |  6  |  9  |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     | L0  |
                         bindings = <
-   &none  &none  &kp N1  &none  &kp N4  &kp N7        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none
-   &none  &none  &kp N2  &none  &kp N5  &kp N8        &kp C_PP    &none         &none         &none       &none       &none
+   &none  &none  &kp N1  &kp W  &kp N4  &kp N7        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &none
+   &none  &none  &kp N2  &kp G  &kp N5  &kp N8        &kp C_PP    &none         &none         &none       &none       &none
    &none  &none  &kp N3  &none  &kp N6  &kp N9        &none       &none         &none         &none       &none       &none
                          &none  &trans  &none         &none       &none         &to 0
                         >;
@@ -160,12 +160,12 @@
                 gaming_chat_ez_layer {
 // -----------------------------------------------------------------------------------------
 // |      |     |  !  |     |     |     |   |     |     |     |     |     |      |
-// |      |     |  @  |  /  |  ?  | ENTR|   |     |LEFT |DOWN | UP  |RIGHT|      |
+// |      | TAB |  @  |  /  |  ?  | ENTR|   |     |LEFT |DOWN | UP  |RIGHT|      |
 // |      |  ~  |  &  |  _  |  -  |     |   |     |HOME |     |     | END |      |
 //                    |     |BSPC+| SHFT|   |     |     |     |
                         bindings = <
    &none  &none      &kp EXCL  &none      &none         &none          &none   &none     &none     &none   &none      &none
-   &none  &none      &kp AT    &kp FSLH   &kp QMARK     &kp RET        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+   &none  &kp TAB    &kp AT    &kp FSLH   &kp QMARK     &kp RET        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
    &none  &kp TILDE  &kp AMPS  &kp UNDER  &kp MINUS     &none          &none   &kp HOME  &none     &none   &kp END    &none
                                &none      &kp LC(BSPC)  &trans         &trans  &none     &none
                         >;
