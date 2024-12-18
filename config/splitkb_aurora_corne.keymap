@@ -105,13 +105,13 @@
 // -----------------------------------------------------------------------------------------
 // |      | ESC |  Q  |  W  |  E  |  R  |   |     |     |     |     |     |      |
 // |      | SHFT|  A  |  S  |  D  |  F  |   |     | F1  | F2  | F3  | F4  |      |
-// |      | CTRL|  Z  |  X  |  C  |  V  |   |     |     |     |     | F12 |      |
+// |      | CTRL|  Z  |  X  |  C  |  V  |   |     | SPC | UP  |     | F12 |      |
 //                    | TAB |  L7 | SPC |   |     |     |     |
                         bindings = <
-   &none  &kp ESC    &kp Q  &kp W    &kp E  &kp R          &none  &none   &none   &none   &none    &none
-   &none  &kp LSHFT  &kp A  &kp S    &kp D  &kp F          &none  &kp F1  &kp F2  &kp F3  &kp F4   &none
-   &none  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V          &none  &none   &none   &none   &kp F12  &none
-                            &kp TAB  &mo 7  &kp SPC        &none  &none   &none
+   &none  &kp ESC    &kp Q  &kp W    &kp E  &kp R          &none  &none    &none   &none   &none    &none
+   &none  &kp LSHFT  &kp A  &kp S    &kp D  &kp F          &none  &kp F1   &kp F2  &kp F3  &kp F4   &none
+   &none  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V          &none  &kp SPC  &kp UP  &none   &kp F12  &none
+                            &kp TAB  &mo 7  &kp SPC        &none  &none    &none
                         >;
                 };
 
