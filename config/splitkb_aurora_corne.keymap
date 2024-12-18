@@ -105,13 +105,13 @@
 // -----------------------------------------------------------------------------------------
 // |      | ESC |  Q  |  W  |  E  |  R  |   |     |     |     |     |     |      |
 // |      | SHFT|  A  |  S  |  D  |  F  |   |     | F1  | F2  | F3  | F4  |      |
-// |      | CTRL|  Z  |  X  |  C  |  V  |   |     |     |     |     |     |      |
-//                    | TAB |  L7 | SPC |   |     | L8  |     |
+// |      | CTRL|  Z  |  X  |  C  |  V  |   |     | SPC | UP  |     | F12 |      |
+//                    | TAB |  L7 | SPC |   |     |     |     |
                         bindings = <
-   &none  &kp ESC    &kp Q  &kp W    &kp E  &kp R          &none  &none   &none   &none   &none   &none
-   &none  &kp LSHFT  &kp A  &kp S    &kp D  &kp F          &none  &kp F1  &kp F2  &kp F3  &kp F4  &none
-   &none  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V          &none  &none   &none   &none   &none   &none
-                            &kp TAB  &mo 7  &kp SPC        &none  &to 8   &none
+   &none  &kp ESC    &kp Q  &kp W    &kp E  &kp R          &none  &none    &none   &none   &none    &none
+   &none  &kp LSHFT  &kp A  &kp S    &kp D  &kp F          &none  &kp F1   &kp F2  &kp F3  &kp F4   &none
+   &none  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V          &none  &kp SPC  &kp UP  &none   &kp F12  &none
+                            &kp TAB  &mo 7  &kp SPC        &none  &none    &none
                         >;
                 };
 
@@ -126,48 +126,6 @@
    &none  &none  &kp N4  &kp G   &kp N5  &kp N6        &kp C_PP    &none         &none         &none       &none       &none
    &none  &none  &kp N7  &kp N0  &kp N8  &kp N9        &none       &none         &none         &none       &none       &none
                          &none   &trans  &none         &none       &kp B         &to 0
-                        >;
-                };
-
-                gaming_chat_base_layer_8 {
-// -----------------------------------------------------------------------------------------
-// |      |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |      |
-// |      |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |      |
-// |      |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |      |
-//                    |  L9 | BSPC| SHFT|   | L10 | SPC | L6  |
-                        bindings = <
-   &none  &kp SQT   &kp COMMA  &kp DOT  &kp P     &kp Y            &kp F   &kp G    &kp C  &kp R  &kp L  &none
-   &none  &kp A     &kp O      &kp E    &kp U     &kp I            &kp D   &kp H    &kp T  &kp N  &kp S  &none
-   &none  &kp SEMI  &kp Q      &kp J    &kp K     &kp X            &kp B   &kp M    &kp W  &kp V  &kp Z  &none
-                               &mo 9    &kp BSPC  &kp LSHFT        &mo 10  &kp SPC  &to 6
-                        >;
-                };
-
-                gaming_chat_symbol_layer_9 {
-// -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |  `  |  {  |  [  |  (  | "|" |   |  ^  |  )  |  ]  |  }  |  -  |      |
-// |      |  ~  |  %  |  #  |  $  |  \  |   |  _  |  *  |  +  |  =  |  /  |      |
-//                    |     | BSPC| SHFT|   |     | SPC |     |
-                        bindings = <
-   &none  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5          &kp N6     &kp N7    &kp N8    &kp N9     &kp N0     &none
-   &none  &kp GRAVE  &kp LBRC   &kp LBKT  &kp LPAR  &kp PIPE        &kp CARET  &kp RPAR  &kp RBKT  &kp RBRC   &kp MINUS  &none
-   &none  &kp TILDE  &kp PRCNT  &kp HASH  &kp DLLR  &kp BSLH        &kp UNDER  &kp STAR  &kp PLUS  &kp EQUAL  &kp FSLH   &none
-                                &trans    &trans    &trans          &none      &trans    &none
-                        >;
-                };
-
-                gaming_chat_ez_layer_10 {
-// -----------------------------------------------------------------------------------------
-// |      |     |  !  |     |     |     |   |     |     |     |     |     |      |
-// |      | TAB |  @  |  /  |  ?  | ENTR|   |     |LEFT |DOWN | UP  |RIGHT|      |
-// |      |  ~  |  &  |  _  |  -  |     |   |     |HOME |     |     | END |      |
-//                    |     |BSPC+| SHFT|   |     |     |     |
-                        bindings = <
-   &none  &none      &kp EXCL  &none      &none         &none          &none   &none     &none     &none   &none      &none
-   &none  &kp TAB    &kp AT    &kp FSLH   &kp QMARK     &kp RET        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
-   &none  &kp TILDE  &kp AMPS  &kp UNDER  &kp MINUS     &none          &none   &kp HOME  &none     &none   &kp END    &none
-                               &none      &kp LC(BSPC)  &trans         &trans  &none     &none
                         >;
                 };
         };
