@@ -136,9 +136,9 @@
 // |      | CTRL|     |     |  3  |     |   |     |     |     |     |     |      |
 //                    |  F2 |  F1 | SPC |   |     |     | L0  |
                         bindings = <
-   &none  &kp ESC   &kp N2  &kp W   &kp E   &kp N1         &none  &none  &none  &none  &none  &none
-   &none  &kp N4    &kp A   &kp S   &kp D   &kp N5         &none  &none  &none  &none  &none  &none
-   &none  &kp CTRL  &none   &none   &kp N3  &none          &none  &none  &none  &none  &none  &none
+   &none  &kp ESC    &kp N2  &kp W   &kp E   &kp N1         &none  &none  &none  &none  &none  &none
+   &none  &kp N4     &kp A   &kp S   &kp D   &kp N5         &none  &none  &none  &none  &none  &none
+   &none  &kp LCTRL  &none   &none   &kp N3  &none          &none  &none  &none  &none  &none  &none
                             &kp F2  &kp F1  &kp SPC        &none  &none  &to 0
                         >;
                 };
