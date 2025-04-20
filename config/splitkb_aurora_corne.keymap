@@ -61,13 +61,13 @@
                 
                 ez_layer_3 {
 // -----------------------------------------------------------------------------------------
-// |      | ESC |  !  |CAPSW|CAPSL|     |   |     |     | L5  | L8  |     |      |
-// |      | TAB |  @  |  /  |  ?  | ENTR|   |     |     | L4  | L6  |     |      |
+// |      | ESC |  !  |CAPSW|CAPSL|     |   |     | L5  | L8  |     |     |      |
+// |      | TAB |  @  |  /  |  ?  | ENTR|   |     | L4  | L6  | L9  |     |      |
 // |      |  ~  |  &  |  _  |  -  |     |   |     | GUI | ALT |CTRL |     |      |
 //                    |     |BSPC+| SHFT|   |     |     |     |
                         bindings = <
-   &none  &kp ESC    &kp EXCL  &caps_word  &kp CAPS      &none            &none   &none     &to 5     &to 8      &none  &none
-   &none  &kp TAB    &kp AT    &kp FSLH    &kp QMARK     &kp RET          &none   &none     &to 4     &to 6      &none  &none
+   &none  &kp ESC    &kp EXCL  &caps_word  &kp CAPS      &none            &none   &to 5     &to 8     &none      &none  &none
+   &none  &kp TAB    &kp AT    &kp FSLH    &kp QMARK     &kp RET          &none   &to 4     &to 6     &to 9      &none  &none
    &none  &kp TILDE  &kp AMPS  &kp UNDER   &kp MINUS     &none            &none   &kp LGUI  &kp LALT  &kp LCTRL  &none  &none
                                &none       &kp LC(BSPC)  &kp LSHFT        &trans  &none     &none
                         >;
@@ -142,5 +142,32 @@
                             &kp F2  &kp F1  &kp SPC        &none  &none  &to 0
                         >;
                 };
+
+                yume_nikki_layer_9 {
+// -----------------------------------------------------------------------------------------
+// |      | ESC |     |  UP |     |     |   |     |     |     |     |     |      |
+// |      |     | LEFT| DOWN|RIGHT|     |   |     |ENTR |  X  |  9  |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     | L0  |
+                        bindings = <
+   &none  &kp ESC  &none     &kp UP    &none      &none        &none  &none    &none  &none   &none  &none
+   &none  &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none        &none  &kp RET  &kp X  &kp N9  &none  &none
+   &none  &none    &none     &none     &none      &none        &none  &none    &none  &none   &none  &none
+                             &none     &none      &none        &none  &none    &to 0
+                        >;
+                };
         };
 };
+
+// template:
+
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     | L0  |
+//                      bindings = <
+// &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
+// &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
+// &none  &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
+//                      &none  &none  &none        &none  &none  &to 0
